@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.learningtracker.repository.UserRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.learningtracker.model.User;
 
@@ -29,12 +31,12 @@ public class UserController {
 
     @GetMapping("/{id}")
 
-    public Optional<User> getUserById(int id) {
+    public Optional<User> getUserById(@PathVariable int id) {
         return userRepository.findById(id);
     }
 
     @PostMapping
-    public User createUser(User user) {
+    public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
 
