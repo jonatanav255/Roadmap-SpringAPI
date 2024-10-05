@@ -1,4 +1,4 @@
-package com.learningtracker.model;
+package com.learningtracker.learning_roadmap.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

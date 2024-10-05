@@ -1,4 +1,4 @@
-package com.learningtracker.controller;
+package com.learningtracker.learning_roadmap.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,15 +6,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.learningtracker.repository.UserRepository;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.learningtracker.model.User;
+import com.learningtracker.learning_roadmap.model.User;
+import com.learningtracker.learning_roadmap.repository.UserRepository;
 
 @RestController
 @RequestMapping("/users")
