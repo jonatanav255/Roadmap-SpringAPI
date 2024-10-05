@@ -18,7 +18,7 @@ import com.learningtracker.model.User;
 
 // import com.learningtracker.repository.UserRepository;
 @RestController
-@RequestMapping
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
@@ -30,13 +30,15 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-
     public Optional<User> getUserById(@PathVariable int id) {
         return userRepository.findById(id);
     }
 
     @PostMapping
     public User createUser(@RequestBody User user) {
+        System.out.println("-----------");
+        System.out.println(user);
+        System.out.println("-----------");
         return userRepository.save(user);
     }
 
