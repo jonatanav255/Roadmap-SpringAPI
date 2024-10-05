@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.learningtracker.model.User;
 
-// import com.learningtracker.repository.UserRepository;
 @RestController
 @RequestMapping("/users")
 public class UserController {
