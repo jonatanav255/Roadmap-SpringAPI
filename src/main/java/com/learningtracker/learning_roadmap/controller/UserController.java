@@ -17,7 +17,9 @@ import com.learningtracker.learning_roadmap.repository.UserRepository;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "http://localhost:5173/") 
+@CrossOrigin(origins = "*")
+
+
 public class UserController {
 
     @Autowired
